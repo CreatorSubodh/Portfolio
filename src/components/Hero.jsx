@@ -114,7 +114,7 @@ export default function Hero() {
 
             <a
               className="btn btn-ghost"
-              href="/assets/resume/Subodh-Kumar-Resume.pdf"
+              href={`${import.meta.env.BASE_URL}assets/resume/Subodh-Kumar-Resume.pdf`}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Open resume PDF"
