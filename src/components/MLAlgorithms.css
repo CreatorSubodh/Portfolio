@@ -1,0 +1,121 @@
+/* ---- ML Algorithms ---- */
+
+/* Filter bar */
+.ml-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.ml-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  background: transparent;
+  border: 1.5px solid var(--border);
+  border-radius: 50px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+.ml-filter-btn:hover {
+  border-color: var(--border-hover);
+  color: var(--text-primary);
+  background: rgba(255,255,255,0.04);
+}
+.ml-filter-btn--active {
+  background: var(--gradient-accent);
+  border-color: transparent;
+  color: #fff;
+}
+
+.ml-filter-count {
+  background: rgba(255,255,255,0.2);
+  border-radius: 50px;
+  font-size: 0.7rem;
+  padding: 0.05rem 0.4rem;
+  font-weight: 700;
+}
+.ml-filter-btn:not(.ml-filter-btn--active) .ml-filter-count {
+  background: rgba(255,255,255,0.06);
+  color: var(--text-muted);
+}
+
+/* Grid */
+.algo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.algo-grid__item {
+  animation: algoFadeIn 0.35s ease both;
+}
+
+@keyframes algoFadeIn {
+  from { opacity: 0; transform: scale(0.95) translateY(8px); }
+  to   { opacity: 1; transform: scale(1)   translateY(0); }
+}
+
+/* Algo card */
+.algo-card {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.algo-card__name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.algo-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+/* Tag */
+.algo-tag {
+  display: inline-flex;
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  border-radius: 50px;
+  border: 1px solid;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+  transition: opacity var(--transition-fast);
+}
+
+/* Empty / note */
+.ml-empty {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  padding: 2rem 0;
+}
+.ml-note {
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-style: italic;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+  .algo-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

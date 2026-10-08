@@ -1,0 +1,99 @@
+/* ---- About ---- */
+.about__layout {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Bio card */
+.about__bio {
+  padding: 2rem;
+}
+.about__bio-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.about__avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: var(--gradient-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #fff;
+  flex-shrink: 0;
+}
+.about__name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.15rem;
+}
+.about__role {
+  font-size: 0.82rem;
+  color: var(--accent-blue);
+  font-weight: 500;
+  font-family: var(--font-mono);
+}
+.about__text {
+  font-size: 0.925rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+.about__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+/* Focus cards grid */
+.about__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.about__focus-card {
+  padding: 1.4rem;
+}
+.about__focus-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-blue);
+  margin-bottom: 0.85rem;
+}
+.about__focus-card h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: var(--text-primary);
+}
+.about__focus-card p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .about__layout {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .about__cards {
+    grid-template-columns: 1fr;
+  }
+}
