@@ -1,9 +1,9 @@
 /* ---- Contact ---- */
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.25rem;
-  max-width: 800px;
+  max-width: 1100px;
   margin: 0 auto 2rem;
 }
 
@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1.5rem;
+  padding: 1.25rem 1.25rem;
   text-decoration: none;
   background: var(--c-bg, var(--bg-card)) !important;
   border-color: var(--c-border, var(--border)) !important;
@@ -77,7 +77,14 @@
   font-style: italic;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 680px;
+  }
+}
+
+@media (max-width: 560px) {
   .contact-grid {
     grid-template-columns: 1fr;
     max-width: 420px;

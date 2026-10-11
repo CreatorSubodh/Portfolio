@@ -1,7 +1,7 @@
 /* ---- Projects ---- */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-bottom: 2.5rem;
 }
@@ -85,7 +85,13 @@
   color: var(--text-muted);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 992px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
   .projects-grid {
     grid-template-columns: 1fr;
   }

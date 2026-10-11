@@ -17,6 +17,19 @@ import './Projects.css'
  */
 const PROJECTS = [
   {
+    id: 'holiday-package',
+    title: 'Holiday Package Purchase Prediction',
+    category: 'Machine Learning',
+    model: 'Random Forest Classifier',
+    description:
+      'Built a Random Forest classification model to predict whether a customer is likely to purchase a holiday package. ' +
+      'Performed data cleaning, exploratory data analysis, feature engineering, preprocessing, model comparison, ' +
+      'hyperparameter tuning, and model evaluation.',
+    tags: ['Python', 'Pandas', 'Scikit-learn', 'RandomizedSearchCV'],
+    github: 'https://github.com/CreatorSubodh/holiday-package-prediciton',
+    demo: 'https://holiday-package-prediciton.streamlit.app/#holiday-package-purchase-prediction',
+  },
+  {
     id: 'churn',
     title: 'Telecom Customer Churn Prediction',
     category: 'Machine Learning',

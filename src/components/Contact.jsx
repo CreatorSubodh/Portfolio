@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Send } from 'lucide-react'
+import { Github, Linkedin, Mail, Phone, Send } from 'lucide-react'
 import { useInView } from '../hooks/useInView'
 import './Contact.css'
 
@@ -36,6 +36,16 @@ const CONTACTS = [
     bg: 'rgba(52,211,153,0.08)',
     border: 'rgba(52,211,153,0.2)',
   },
+  {
+    id: 'phone',
+    icon: <Phone size={22} />,
+    label: 'Phone',
+    handle: '7042389928',
+    href: 'tel:7042389928',
+    color: '#a78bfa',
+    bg: 'rgba(167,139,250,0.08)',
+    border: 'rgba(167,139,250,0.2)',
+  },
 ]
 
 export default function Contact() {
@@ -57,7 +67,7 @@ export default function Contact() {
         {/* Contact cards */}
         <div className="contact-grid stagger-children" ref={cardsRef}>
           {CONTACTS.map(({ id, icon, label, handle, href, color, bg, border }) => {
-            const isExternal = !href.startsWith('mailto:')
+            const isExternal = !href.startsWith('mailto:') && !href.startsWith('tel:')
             return (
               <a
                 key={id}
